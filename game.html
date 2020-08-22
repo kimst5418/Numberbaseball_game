@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>  Kim's profile </title>
+  </head>
+  <body>
+    <header>
+      <h1 class="navi_intro"><i class="fab fa-fort-awesome"></i> Kim's Profile</h1>
+      <div class="navi_bar">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i>HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a class="active" href="game.html">GAME</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <div id="game_title">
+      <div >
+         <h2><i class="far fa-hand-point-right"></i> Mini Game</h2>
+      </div>
+      <div class="game_list">
+        <input type="checkbox" id="game_ani">
+        <label for="game_ani" class="game_start">&bull; Number Baseball</label>
+        <span id="click_me"><i class="far fa-hand-point-left"></i> Click here<br></span> 
+        <div class="game_baseball">
+          <div>
+            <span>LEVEL : </span><button id="easy">Easy</botton><button id="normal">Normal</botton><button id="hard">Hard</botton>
+          </div>
+          <div>
+            <input type="number" id='input'>
+            <button id="check">click</botton>
+            <button id="reset">reset</botton>
+          </div>
+          <div id="logs"></div>
+          <div id="info"></div>
+          <script src="numberbaseball.js"> </script>
+        </div>
+      </div>
+      <div class="game_list">&bull; Others... (Update Late)</div>
+    </div>
+    
+  </body>
+</html>

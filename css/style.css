@@ -1,0 +1,295 @@
+body {
+    margin:0;
+    background-color: #ecf9f2;
+ }
+ /* navi_bar */
+header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   padding: 20px 0px;
+   margin: 0;
+   background-color: #fff2e6;
+  }
+header h1{
+   font-size: 25px;
+   float: left;
+   margin: 0;
+   padding: 10px 20px;
+  }
+a{
+  text-decoration: none;
+  color:black;
+}
+.navi_bar{
+   float: right;
+  }
+.navi_bar ul{
+   margin: 0;
+   padding: 10px 20px;
+  }
+.navi_bar li{
+   font-size: 22px;
+   display: inline-block;
+  }
+ .navi_bar li a{
+   margin:0;
+   padding: 20px;
+  }
+  .navi_bar a:hover {
+    background-color: #ffbf80;
+    color:white;
+    font-weight : bold;
+  }
+  .navi_bar .active {
+    background-color: #8cd9b3;
+    color: white;
+  }
+/* home_body */
+.home_img{
+  display: block;
+  width :60%;
+  margin:120px auto 20px auto;
+}
+.home_navi{
+  text-align: center;
+  font-size: 30px;
+}
+.home_navi a{
+  display: inline-block;
+  padding: 0 20px 50px 0;
+}
+.home_navi a:hover {
+  font-weight : bolder;
+}
+/* About_body */
+#about_intro{
+ display:grid;
+ grid-template-columns: 450px 350px 1fr;
+ margin:120px 0 0 0;
+}
+#about_intro .about_img{
+ width :400px;
+ padding: 30px;
+}
+#about_intro ul{
+ font-size: 20px;
+ list-style-type : none;
+ padding-left: 10px;
+}
+#about_intro .about_title1{
+ border-bottom: solid 2px black;
+}
+#about_intro .about_content{
+ list-style-type : square;
+ padding:15px 0px 0px 60px;
+}
+#about_title2{
+ font-size: 30px;
+ padding-left: 30px;
+}
+#about_grid{
+ display:grid;
+ padding: 0 20px;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: repeat(2,1fr);
+}
+.about_inter{
+ width : 320px;
+ padding: 0px;
+ margin:0 auto;
+}
+.about_inter img{
+  display: block;
+  width:300px;
+  height:300px;
+  margin:0px auto;
+}
+.about_inter h3{
+ text-align: center;
+ font-style: italic;
+}
+@media(max-width:950px){
+ #about_grid{
+   display: block;
+ }
+}
+@media(max-width:750px){
+ #about_intro{
+   display:block;
+ }
+}
+
+/* contact_body */
+#contact_intro{
+  display:grid;
+  grid-template-columns: 450px 580px;
+  width: 1000px;
+  margin:120px auto;
+}
+#contact_intro .contact_img{
+  width :450px;
+  padding: 30px;
+}
+#contact_intro ul{
+  font-size: 20px;
+  list-style-type : none;
+  padding-left: 10px;
+  margin:0px 50px;
+}
+#contact_intro .contact_content{
+  font-size: 20px;
+  list-style-type : none;
+  padding-left: 10px;
+  margin:0px;
+}
+#contact_intro .contact_title{
+  border-bottom: solid 2px black;
+}
+#contact_intro .contact_content{
+  list-style-type : square;
+  padding:15px 0px 0px 60px;
+}
+#contact_intro a:hover {
+  font-weight : bolder;
+}
+@media(max-width:750px){
+ #contact_intro{
+   display:block;
+ }
+}
+/* contact_animation */
+#contact_intro input {
+    display: none;
+}
+#contact_intro label {
+    cursor: pointer;
+}
+#contact_intro .contact_social{
+  margin: 0px;
+  position: relative;
+  animation-name: avoid;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: all 1s;
+}
+#contact_intro .contact_social i{
+  padding: 0px 5px;
+}
+@keyframes  avoid {
+  0%   {background-color:red; left:0px;}
+  25%  {background-color:yellow; left:100px;}
+  50%  {background-color:#6666ff; left:0px; }
+  75%  {background-color:#00e600; left:100px; }
+  100% {background-color:red; left:0px;}
+}
+#contact_intro #contact_ani:checked ~ .contact_social{
+  margin: 0px;
+  position: relative;
+  animation-name: avoid2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  font-size:50px;
+}
+@keyframes  avoid2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:100px; top:0px;}
+  50%  {background-color:#6666ff; left:100px; top:100px; }
+  75%  {background-color:#00e600; left:0px; top:100px; }
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
+/* game_body */
+#game_title{
+  width: 550px;
+  margin: 120px 50px;
+  
+}
+#game_title .game_list{
+  font-size: 20px;
+  font-weight : bolder;
+  margin : 10px;
+}
+
+#game_title #game_ani {
+  display: none;
+}
+#game_title label {
+  cursor: pointer;
+}
+
+#game_title .game_baseball{
+  display: none;  
+  width: 420px;
+  margin: 10px 20px;
+  padding : 10px;
+  border: solid 2px green;
+}
+
+#game_title #game_ani:checked ~ .game_baseball{
+  display: block;
+}
+
+#game_title input{
+  font-size: 20px;
+  height: 30px;
+  margin: 5px;
+  padding : 0px 0px 0px 5px;
+  border : solid 1px black;
+}
+
+#game_title button{
+  font-size: 20px;
+  width: 60px;
+  height: 30px;
+  margin: 5px;
+  background-color: #fff2e6;
+  border-radius : 5px;
+  border-color: #ffb066;
+  cursor: pointer;  /* 커서 pointer로 변환*/
+  color:#595959;
+}
+
+#game_title button:focus{  /*버튼활성화 시 검정테두리 제거*/
+  outline:0;
+}
+#game_title button:active{ /*버튼클릭 효과*/
+  box-shadow: 2px 2px #ffca99;
+  transform: translateY(2px); 
+}
+#game_title button:hover{
+  color:black;
+}
+#game_title #normal{
+  width: 80px;
+}
+#game_title #logs{
+  font-size: 20px;
+  margin : 10px;
+  font-weight : normal; 
+}
+
+#game_title #info{
+  font-size: 18px;
+  margin : 10px;
+  font-weight : bold; 
+}
+
+#click_me{
+  margin: 0px;
+  position: relative;
+  animation-name: clickme;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes  clickme {
+  0%   {left:0px;}
+  50%  {left:30px;}
+  100% {left:0px;}
+}
+
+#game_title #game_ani:checked ~ #click_me{
+  animation-iteration-count: 0;
+}
