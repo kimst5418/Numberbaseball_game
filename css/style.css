@@ -30,7 +30,7 @@ a{
   }
 .navi_bar li{
    font-size: 22px;
-   display: inline-block;
+   display: inline-block;   
   }
  .navi_bar li a{
    margin:0;
@@ -62,6 +62,26 @@ a{
 .home_navi a:hover {
   font-weight : bolder;
 }
+@media(max-width:570px){
+  .navi_bar li{
+    display: block;   
+   }
+   .navi_bar li a{
+    margin:20px;
+    padding: 0px;
+   }
+   .home_navi a{
+    display: block;
+    padding: 0px;
+    margin:10px;
+  }
+  .home_img{
+    display: block;
+    width :75%;
+    margin:200px auto 15px auto;
+  }
+}
+
 /* About_body */
 #about_intro{
  display:grid;
@@ -129,7 +149,7 @@ a{
 }
 #contact_intro .contact_img{
   width :450px;
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
 }
 #contact_intro ul{
   font-size: 20px;
@@ -153,10 +173,21 @@ a{
 #contact_intro a:hover {
   font-weight : bolder;
 }
-@media(max-width:750px){
+@media(max-width:850px){
  #contact_intro{
    display:block;
- }
+  }
+  #contact_intro ul{
+    margin:0px 0px 0px 10px;
+  }
+  #contact_intro .contact_title{
+    width: 500px;
+  }
+}
+@media(max-width:570px){
+  #contact_intro{
+    margin:180px auto;
+  }
 }
 /* contact_animation */
 #contact_intro input {
@@ -203,8 +234,7 @@ a{
 /* game_body */
 #game_title{
   width: 550px;
-  margin: 120px 50px;
-  
+  margin: 150px 50px;
 }
 #game_title .game_list{
   font-size: 20px;
@@ -221,7 +251,7 @@ a{
 
 #game_title .game_baseball{
   display: none;  
-  width: 420px;
+  width: 430px;
   margin: 10px 20px;
   padding : 10px;
   border: solid 2px green;
@@ -293,3 +323,9 @@ a{
 #game_title #game_ani:checked ~ #click_me{
   animation-iteration-count: 0;
 }
+
+@media(max-width:560px){
+  #game_title{
+    margin: 200px 0px 10px 20px;
+  }
+ }
