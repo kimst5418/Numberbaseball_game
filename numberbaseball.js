@@ -116,3 +116,4 @@ resetbutton.addEventListener('click', () => {
     numberselect(Level);
     info.textContent='난이도를 선택하세요';
 });
+//test
